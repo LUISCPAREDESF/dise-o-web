@@ -43,7 +43,7 @@
 					<img src="img/unad.png" class="img-w-150" alt="">
 				</div>
 				<div class="col-lg-8">
-					<h3 class="text-center" id="tituloIndex">Conocimiento Github</h3>
+					<h3 class="text-center" id="tituloIndex">Bienvenidos al curso de Git y GitHub</h3>
 				</div>
 			</div>
 			<div class="row margen-seccion">
@@ -53,7 +53,7 @@
 						<div class="col-lg-9">
 							<h4>Tematicas a desarrollar</h4>
 							<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
-							<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+							<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crear un repositorio local con Git</span><br>
 							<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
 						</div>
 						<div class="col-lg-3">
@@ -80,10 +80,47 @@
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-9">
-					<p class="text-justify">Los sistemas de control de versiones, revisar en nuestra seccion de <span onclick="mostrar_vista('videos')" class="enlace" style="color: #0086FF">videos</span> el video 2del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+					<p class="text-justify">Vamos a empezar a usar un poco de Git. Lo primero es lo primero: tienes que instalarlo. Puedes obtenerlo de varias maneras; las dos principales son instalarlo desde código fuente, o instalar un paquete existente para tu plataforma.</p>
+					<h5 class="text-justify" id="tituloIndex">Instalando desde código fuente</h5>
+						<p class="text-justify">Si puedes, en general es útil instalar Git desde código fuente, porque obtendrás la versión más reciente. Cada versión de Git tiende a incluir útiles mejoras en la interfaz de usuario, por lo que utilizar la última versión es a menudo el camino más adecuado si te sientes cómodo compilando software desde código fuente. También ocurre que muchas distribuciones de Linux contienen paquetes muy antiguos; así que a menos que estés en una distribución muy actualizada o estés usando backports, instalar desde código fuente puede ser la mejor opción.</p>
+							<p class="text-justify">Para instalar Git, necesitas tener las siguientes librerías de las que Git depende: curl, zlib, openssl, expat y libiconv. Por ejemplo, si estás en un sistema que tiene yum (como Fedora) o apt-get (como un sistema basado en Debian), puedes usar estos comandos para instalar todas las dependencias:</p>
+								<p class="text-justify">$ yum install curl-devel expat-devel gettext-devel \
+  openssl-devel zlib-devel</p>
+									<p class="text-justify">$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
+  libz-dev libssl-dev</p>
+									<p class="text-justify">Cuando tengas todas las dependencias necesarias, puedes descargar la versión más reciente de Git desde su página web:</p>
+									<p class="text-justify">http://git-scm.com/download</p>
+									<p class="text-justify">Luego compila e instala:</p>
+									<p class="text-justify">$ tar -zxf git-1.6.0.5.tar.gz</p>
+									<p class="text-justify">$ cd git-1.6.0.5</p>
+									<p class="text-justify">$ make prefix=/usr/local all</p>
+									<p class="text-justify">$ sudo make prefix=/usr/local install</p>
+									<p class="text-justify">Una vez hecho esto, también puedes obtener Git, a través del propio Git, para futuras actualizaciones:</p>
+									<p class="text-justify">$ git clone git://git.kernel.org/pub/scm/git/git.git</p>
+								<h5 class="text-justify" id="tituloIndex">Instalando en Linux</h5>
+									<p class="text-justify">Si quieres instalar Git en Linux a través de un instalador binario, en general puedes hacerlo a través de la herramienta básica de gestión de paquetes que trae tu distribución. Si estás en Fedora, puedes usar yum:</p>
+										<p class="text-justify">$ yum install git-core</p>
+											<p class="text-justify">O si estás en una distribución basada en Debian como Ubuntu, prueba con apt-get:</p>
+												<p class="text-justify">$ apt-get install git</p>
+											<h5 class="text-justify" id="tituloIndex">Instalando en Mac</h5>
+														<p class="text-justify">Hay tres maneras fáciles de instalar Git en un Mac. La más sencilla es usar el instalador gráfico de Git, que puedes descargar desde la página de SourceForge (véase Figura 1-7):</p>
+															<p class="text-justify">http://sourceforge.net/projects/git-osx-installer/</p>
+															<div class="col-lg-4">
+																	<img src="img/mac.png" alt="" class="img-thumbnail">
+															</div>
+																<p class="text-justify">Figura 1. Instalador de Git para OS X.</p>
+																	<p class="text-justify">Una alternativa es instalar Git a través de MacPorts (http://www.macports.org). Si tienes MacPorts instalado, instala Git con:</p>
+																		<p class="text-justify">$ sudo port install git-core +svn +doc +bash_completion +gitweb</p>
+																			<p class="text-justify">La segunda alternativa es Homebrew (http://brew.sh/). Si ya tienes instalado Homebrew, instala Git con:</p>
+																				<p class="text-justify">$ brew install git</p>
+																					<h5 class="text-justify" id="tituloIndex">Instalando en Windows</h5>
+																					<p class="text-justify">Instalar Git en Windows es muy fácil. El proyecto msysGit tiene uno de los procesos de instalación más sencillos. Simplemente descarga el archivo exe del instalador desde la página de GitHub, y ejecútalo:</p>
+																						<p class="text-justify">http://msysgit.github.com/</p>
+																							<p class="text-justify">Una vez instalado, tendrás tanto la versión de línea de comandos (incluido un cliente SSH que nos será útil más adelante) como la interfaz gráfica de usuario estándar.</p>
+																								<p class="text-justify">Nota para el uso en Windows: Se debería usar Git con la shell provista por msysGit (estilo Unix), lo cual permite usar las complejas líneas de comandos de este libro. Si por cualquier razón se necesitara usar la shell nativa de Windows, la consola de línea de comandos, se han de usar las comillas dobles en vez de las simples (para parámetros que contengan espacios) y se deben entrecomillar los parámetros terminándolos con el acento circunflejo (^) si están al final de la línea, ya que en Windows es uno de los símbolos de continuación.</p>
 					<h4>Tematicas a desarrollar</h4>
 					<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
-					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crear un repositorio local con Git</span><br>
 					<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
 				</div>
 				<div class="col-lg-3">
@@ -103,10 +140,14 @@
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-9">
-					<p class="text-justify">Los sistemas de control de versiones son programas que tienen como objetivo controlar los cambios del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+						<h5 class="text-justify" id="tituloIndex">CÓMO CREAR UN REPOSITORIO LOCAL CON GIT Y SUBIRLO A GITHUB</h5>
+					<p class="text-justify">Hola que tal bienvenido, últimamente no he escrito en el blog ya que me he dedicado casi al 100% al canal en Youtube que también es otro medio donde puedo compartir conocimientos, es así que si estás interesado en la Programación Web con Java, hay una lista con más de 30 videos que empiezan desde cero y que puedes acceder desde el siguiente enlace: Desarrollo Web con Java EE.</p>
+          <p class="text-justify">Bueno como te mencioné últimamente he estado realizando algunos videos en Youtube específicamente es un Proyecto CRUD completo y desde cero en Java Web, usando JSP, Servlet, Maven, JSTL, Pool de Conexiones, Transacciones JDBC y en este video aprovecho para con este proyecto crear un repositorio local con Git y subirlo a GitHub, así que sin más palabras a continuación te dejo con le video.</p>
+					  <iframe width="560" height="315" src="https://www.youtube.com/embed/l2MdKm5RN3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						  <p class="text-justify">Largo.E[Elivar Largo](23-sep-2018)Cómo crear un repositorio local con Git y subirlo a GitHub[Archivo de video]Recuperado de:youtube.com/watch?v=l2MdKm5RN3o&feature=youtu.be</p>
 					<h4>Tematicas a desarrollar</h4>
 					<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
-					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crear un repositorio local con Git</span><br>
 					<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
 				</div>
 				<div class="col-lg-3">
@@ -121,15 +162,43 @@
 					<img src="img/unad.png" class="img-w-150" alt="">
 				</div>
 				<div class="col-lg-8">
-					<h3 class="text-center" id="tituloIndex">Sincronización</h3>
-				</div>
+					<h3 class="text-center" id="tituloIndex">Sincronizar repositorios github remoto y local</h3>
+			</div>
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-9">
-					<p class="text-justify">Los sistemas de control de versiones son programas que tienen como objetivo controlar los cambios del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+					<p class="text-justify">Una de las cosas que más me gustan de github es que nos permite trabajar prácticamente en cualquier lugar, en remoto o en local. En este mini-post veremos cómo hacerlo.</p>
+					<h3 class="text-center" id="tituloIndex">Creación de directorio local y clonación de repositorio remoto a local</h3>
+<p class="text-justify">Ya hemos creado nuestro repositorio en https://github.com/. Ahora lo que vamos a hacer es clonarlo a nuestro ordenador. Para ello, lo primero es crearnos un directorio para tal fin:</p>
+<p class="text-justify">mkdir ~/directorio_repositorio</p>
+<p class="text-justify">Una vez creado el directorio, nos movemos a él:</p>
+<p class="text-justify">cd ~/directorio_repositorio</p>
+<p class="text-justify">Y, ahora sí, clonamos nuestro repositorio de github desde Internet:</p>
+<p class="text-justify">git clone https://github.com/vuestro-usuario/vuestro-repositorio</p>
+<p class="text-justify">Ahora ya podemos trabajar en nuestro repositorio de forma local.</p>
+	<h3 class="text-center" id="tituloIndex">Sincronización de repositorio local a remoto</h3>
+<p class="text-justify">Cuando hayamos trabajado en local y queramos sincronizar con nuestro repositorio remoto en los servidores de github, haremos lo siguiente:</p>
+<h3 class="text-center" id="tituloIndex">Comprobación de los cambios</h3>
+<p class="text-justify">git status</p>
+<p class="text-justify">Este comando nos informará de cuantos cambios hayamos añadido.</p>
+<h3 class="text-center" id="tituloIndex">Añadido los cambios</h3>
+<p class="text-justify">git add *</p>
+<p class="text-justify">Con este comando añadimos todos los cambios realizados a la lista de archivos para comitear al repositorio remoto (podemos comprobar que han sido añadidos ejecutando de nuevo el comando git status). El siguiente paso es, por tanto, comitear esos archivos para poder sincronizarlos con el directorio remoto:</p>
+<p class="text-justify">git commit -m "nombre-del-comit"</p>
+<h3 class="text-center" id="tituloIndex">Sincronizando con repositorio remoto</h3>
+<p class="text-justify">Finalmente, damos la orden para sincronizar nuestros cambios en local con el repositorio remoto:</p>
+<p class="text-justify">git push origin master</p>
+<h3 class="text-center" id="tituloIndex">Sincronizando con repositorio remoto local</h3>
+<p class="text-justify">A partir de ahora, cada vez que hagamos cambios en nuestro repositorio remoto, nos bastará con el siguiente comando para sincronizar en local:</p>
+<p class="text-justify">git pull</p>
+<p class="text-justify">Por supuesto, no debemos olvidar que este comando ha de ejecutarse desde dentro del directorio del repositorio local que creamos anteriormente (en nuestro caso ~/directorio_repositorio).</p>
+<p class="text-justify">Si volvemos a modificar en local y queremos sincronizar a remoto, volveremos a repetir los pasos explicados arriba:</p>
+<p class="text-justify">git add *</p>
+<p class="text-justify">git commit -m "nombre-del-commit"</p>
+<p class="text-justify">git push origin master</p>
 					<h4>Tematicas a desarrollar</h4>
 					<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
-					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crear un repositorio local con Git</span><br>
 					<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
 				</div>
 				<div class="col-lg-3">
@@ -146,20 +215,60 @@
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-12">
-					<h4>Aliqua qui amet amet consectetur et laborum sed et aliquip velit deserunt deserunt aliqua magna enim ut.</h4>
-					<p class="text-justify">Elit ut aliqua velit commodo in laborum duis dolor dolor ut ad. Officia amet amet mollit eu ad occaecat aute minim minim magna. Magna dolore anim esse esse aute incididunt id in occaecat laborum voluptate dolor ut nisi consectetur. Ut est minim ut non eu aliquip quis duis. Aute sunt sint veniam qui pariatur esse laborum cupidatat dolor aliquip in consequat. Veniam dolor anim aliqua culpa ut tempor consequat culpa ea in ut commodo aliqua veniam magna do. Dolor labore sunt mollit dolor eiusmod velit dolor aute sed in cupidatat sunt sed aliqua. Esse dolore eiusmod et dolore culpa cillum ullamco non ea aute in ex amet cillum.</p>
+					<h4>HISTORIA</h4>
+					<p class="text-justify">Los sistemas de control de versiones no son recientes en absoluto, de hecho ya han pasado por varias generaciones:</p>
+					<p class="text-justify">Primera Generación: Varias personas podían trabajar en el mismo archivo, pero no simultáneamente ya que el archivo se bloqueaba para evitar estas múltiples conexiones a la vez.</p>
+					<p class="text-justify">Segunda Generación: Muchos de los sistemas de control de versiones que nos ofrecen distintos hostings hoy día se encuentran en esta categoría. A diferencia de la primera generación, varios usuarios pueden conectarse y trabajar de forma simultánea en un mismo archivo, pero los cambios deberán combinarse en la revisión actual antes de poder cerrarla para compararla con previas o posteriores.</p>
+          <p class="text-justify">CVS (Concurrent Version System) es uno de los controladores de versiones de esta generación. Permite interacciones cliente/servidor.</p>
+					<p class="text-justify">VN (o Apache Subversion in full) se podría entender como un rediseño de CVS que pone fin a algunas de las limitaciones establecidas.</p>
+					<p class="text-justify">Tercera Generación: Destaca el DVCS (Distributed Version Control System) y su posibilidad de separar y combinar operaciones de confirmación para generar las diferentes revisiones, o el que diferentes ramas de un proyecto contengan a su vez diferentes partes. Git es uno de sus ejemplos más reconocidos.</p>
+					<h4>Como funciona GIT</h4>
+					<p class="text-justify">Es la principal pregunta que, aunque se podría sacar de la redacción hasta este punto, vamos a especificar un poco más.</p>
+					<p class="text-justify">Primero deberemos implementar un servicio de control de versiones o suscribirnos a un hosting que lo ofrezca (más adelante veremos algunos) y en ellos especificaremos qué directorios de nuestro proyecto deberán ser seguidos por el control de versiones (puede que no queramos rastrear todos los directorios por la inamovilidad de algún dato en concreto).</p>
+					<p class="text-justify">Una vez hecho esto, deberemos designar a los colaboradores que tendrán acceso al proyecto (deberán crearse una cuenta por lo general) y estableceremos los permisos que queramos otorgarles.</p>
+					<p class="text-justify">Con estos parámetros configurados, los cambios se registrarán automáticamente, pero éstos lo harán como una ‘colección’ de acciones llamada revisión; asegurándonos así de acceder siempre a la versión más reciente de nuestro proyecto.</p>
+					<p class="text-justify">Ya tenemos nuestro proyecto establecido y podemos controlar sus diferentes versiones, accesos y demás. Pero ahora queremos implementar un cambio drástico (probar una nueva interfaz que no sabemos si se integrará bien con nuestros componentes…) y no queremos que se cree la revisión de inmediato.</p>
+					<p class="text-justify">En estos casos podemos generar ramificaciones del proyecto principal (denominadas ‘branchs’), que no son más que una copia temporal en la que trabajaremos en paralelo al proyecto para implementar o probar estos cambios. Si las pruebas son satisfactorias podremos integrar esta rama de nuevo al hilo principal, sin embargo, en caso resultar en catástrofe, podremos descartar los cambios sin asentar ninguna nueva revisión al hilo principal.</p>
+					<p class="text-justify">Dependiendo de la configuración que hayamos establecidos, los sistemas de control de versiones suelen tener cierta “inteligencia” para reconocer qué cambios deben asentarse como revisiones, no obstante en caso de no quererlo así o en caso que el sistema sea incapaz de decidir qué cambios incluir en cada revisión, deberemos solventar el conflicto manualmente.</p>
+					<p class="text-justify">Esaú A(2016)Git: Qué es y cómo funciona.Recuperado de:https://openwebinars.net/blog/git-que-es-como-funciona/</p>
+					</div>
+				<div class="col-lg-12">
+					<h4>Repositorios Públicos en Github</h4>
+					<p class="text-justify">Git es un sistema de control de versiones, que es un software permite tener un control de cambios sobre el código fuente de una aplicación.</p>
+						<p class="text-justify">GitHub es una página que ofrece un grupo de servicios que facilitan el uso de Git, como por ejemplo hosting de proyectos, facilidades de colaboración, reviews de código, perfiles personales, pull requests, issues, etc.</p>
+							<p class="text-justify">GitHub es la plataforma de “hosting” de los proyectos. Una comunidad llena de personas que desarrollan y comparten, usando GIT. </p>
+								<p class="text-justify">Como se ha dicho, Github github.com es un servicio para alojamiento de repositorios de software gestionados por el sistema de control de versiones Git. Por tanto, Git es algo más general que nos sirve para controlar el estado de un desarrollo a lo largo del tiempo, mientras que Github es algo más particular: un sitio web que usa Git para ofrecer a la comunidad de desarrolladores repositorios de software. En definitiva, Github es un sitio web pensado para hacer posible el compartir el código de una manera más fácil y al mismo tiempo darle popularidad a la herramienta de control de versiones en sí, que es Git.</p>
+									<p class="text-justify">Cabe destacar que Github es un proyecto comercial, a diferencia de la herramienta Git que es un proyecto de código abierto. No es el único sitio en Internet que mantiene ese modelo de negocio, pues existen otros sitios populares como Bitbucket o Gitlab que tienen la misma fórmula. No obstante, aunque Github tenga inversores que inyectan capital y esté movido por la rentabilidad económica, en el fondo es una iniciativa que siempre ha perseguido (y conseguido) el objetivo de hacer más popular el software libre. En ese sentido, en Github es gratuito alojar proyectos Open Source, lo que ha posibilitado que el número de proyectos no pare de crecer, y en estos momentos haya varios millones de repositorios y usuarios trabajando con la herramienta.</p>
+										<p class="text-justify">Crespo.E(s.f.)Aprendiendo Arduino.recueprado de:https://aprendiendoarduino.wordpress.com/tag/github/</p>
 				</div>
 				<div class="col-lg-12">
-					<h4>Lorem ipsum veniam occaecat ea proident proident proident eiusmod esse id mollit id nisi dolor qui proident magna mollit minim ut.</h4>
-					<p class="text-justify">Dolore consectetur amet mollit irure cupidatat reprehenderit mollit occaecat magna. Irure ullamco sint consectetur id esse adipisicing ea adipisicing ut occaecat sunt esse esse reprehenderit dolore veniam voluptate. Lorem ipsum dolore culpa in culpa tempor aliqua cillum cupidatat ullamco in cillum nulla nulla irure dolore excepteur nisi. Reprehenderit nisi aute excepteur ea enim exercitation laborum pariatur aliqua nulla esse consequat. Lorem ipsum qui consectetur ut dolore non pariatur cillum aute magna non quis consequat. Aute dolore in magna minim qui irure voluptate ex aliquip. Qui anim mollit deserunt esse occaecat nisi magna sit ea tempor laborum pariatur enim. Dolore dolore tempor mollit exercitation excepteur sit enim velit pariatur enim culpa ex excepteur mollit nulla elit.</p>
+					<h4>Ventajas de Github.</h4>
+					<p class="text-justify">Si eres desarrollador o desarrolladora y aún no conoces que es Github ni Git, a continuación te lo explicaré y te daré 10 razones por las cuales después de leer este articulo correrás abrir una cuenta.
+
+En primer lugar hay que mencionar que Git es un sistema de control de versiones distribuido, gratis, open source, rápido y eficiente y Github es una plataforma web para alojar repositorios de código usando el sistema de Git.</p>
+					<h4>1. Versionar tu código.</h4>
+					<p class="text-justify">Esto quiere decir guardar en determinado momento los cambios efectuados a un archivo o conjunto de archivos, con la oportunidad que tener acceso a ese historial de cambios, ya sea para regresar a una de esas versiones o para hacer comparaciones entre ellas. En este punto hay que destacar las ventajas frente a herramientas como Subversion y Perforce; que son usadas para este mismo fin, la principal es que no necesitarías montar, mantener, hacer copias de seguridad, etcétera a un repositorio o servidor para proteger el código que escribes, en este caso Github es el plataforma que cumple esta función. Lo único que necesitas es instalar Git en tu equipo, crear tu cuenta en Github y luego de realizar algunas configuraciones sencillas y ejecutar los comandos adecuados podrás enviar tu código a Github. Es importante mencionar que la visibilidad de los proyectos será público o privado según lo decidas</p>
+				<h4>2. Aprender y experimentar</h4>
+					<p class="text-justify">Como muchos desarrolladores tienen de forma pública sus proyectos en Github es posible acceder a su código, leerlo, estudiarlo y aprender de el, e incluso podrías hacer cambios y experimentar sin afectar el código original, a esto último se le conoce como: hacer fork</p>
+				<h4>3. Contribuir</h4>
+					<p class="text-justify">Si luego de copiar un proyecto (hacer fork) haces ajustes que arreglan bugs o introducen una nueva funcionalidad, puedes proponerle al dueño del proyecto que integre tus cambios en su código. Eso lo puedes hacer enviando un pull request con todas tus modificaciones o novedades. Mediante un pull request el administrador del repositorio original tendrá la posibilidad de revisar, testear o escribir comentarios sobre alguna líneas de tu propuesta, y finalmente si considera interesante tu contribución podrá realizar la fusión de esta con el código original (a esto se le conoce como hacer merge) o en caso contrario rechazar los cambios propuestos.</p>
+					<h4>4. Trabajo en equipo</h4>
+					<p class="text-justify">Github es el lugar perfecto para trabajar conjuntamente en una idea con un amigo o colega, después de crear tu proyecto podrás invitar a otros usuarios como colaboradores, permitiendo así que estos lean y escriban directamente sobre tu repositorio.</p>
+				<h4>5. Estar informado(a)</h4>
+					<p class="text-justify">Github tiene un sistema de notificaciones con el cual puedes estar al tanto de las actividades alrededor de un repositorio en el cual estas participando o uno en el cual estés interesado. La notificaciones de los proyectos a los que perteneces o eres dueño, están habilitadas de forma automática, y para aquellos en los cuales no eres participantes pero estas interesado es necesario activarlas haciendo watch sobre el repositorio en cuestión. Algunas de novedades que se notifican son: la creación de un pull request o el reporte de un bug, una mención de tu usuario en una conversación o comentario, etc. Estas notificaciones se pueden consultar a través de correo electrónico o directamente en Github.</p>
+				<h4>6. Visor de código</h4>
+          <p class="text-justify">GitHub posee un estupendo visor de código mediante el cual, a través del navegador, podras consultar en cualquier instante el contenido de un archivo determinado, con la sintaxis correspondiente a el lenguaje en el que esté escrito. Este navegador es realmente rápido, y gracias a él podremos hacer pequeñas consultas o copiar porciones de código sin necesidad de bajarse todo el repositorio.</p>
+		    <h4>7. Mostrar tus conocimientos</h4>
+				  <p class="text-justify">Con Github puedes mostrar tus habilidades como desarrollador(a), puesto que es el código escrito en los archivos, donde reposa el resultado del proceso del desarrollo de software. Al compartir tu cuenta de Github con tu potencial empleador o cliente, este podrá ver la calidad del código que escribes a través de los proyectos públicos que estén en tu cuenta. Todos los proyectos que se escriben para ejecutar una idea, aprender un nuevo lenguaje o tecnología son válidos al momento de exhibir tus conocimientos, así que no dudes en publicarlo en tu cuenta. Como complemento a lo anterior, con Github Pages puedes crear incluso una página como esta que te sirva como portafolio, en la cual puedes escribir sobre ti, los conocimientos que posees o poner enlaces de los proyectos en los que has participado.</p>
+					 <h4>8. Registro de incidencias</h4>
+						  <p class="text-justify">Cada proyecto creado en Github incluye un sistema de seguimiento de problemas, del estilo sistema de tickets, este permite a los miembros de tu equipo (o a cualquier usuario de GitHub si tu repositorio es público) abrir un ticket escribiendo en este los detalles un problema que tenga con tu software o una sugerencia sobre una función que le gustaría que fuera implementada.</p>
+							<h4>9. Compatibilidad</h4>
+								  <p class="text-justify">Github es una plataforma web, por tanto es independiente del sistema operativo que utilices, y además Git, que es la herramienta que si requiere instalación, es compatible con todos los sistemas; Linux, OSX y Windows.</p>
+									 <h4>10. Precio</h4>
+										  <p class="text-justify">Github, es completamente gratis e ilimitado para proyectos públicos, es decir que todos podrán ver el código que estos contienen (aunque tú siempre tendrás el control sobre quien subirá cambios), también ofrece la posibilidad de tener proyectos privados ilimitados, pero con la restrición de sólo 3 colaboradores por repositorio. Sin embargo si quieres tener participantes ilimitados en tus proyectos privados y acceso a herramientas avanzadas puedes adquirir una cuenta pro (que a la fecha de este artículo) cuesta 7 dólares mensuales.</p>
+											<p class="text-justify">Erlinis.(2019)10 razones para usar Github.Recuperado de:https://gist.github.com/erlinis/57a55dfb0337f5cd15cd</p>
 				</div>
 				<div class="col-lg-12">
-					<h4>Elit cupidatat consequat culpa culpa in ullamco aliqua enim deserunt.</h4>
-					<p class="text-justify">Lorem ipsum quis duis incididunt nulla minim ut mollit nulla exercitation non proident ut magna anim fugiat aute in fugiat sint. Exercitation voluptate ad esse incididunt in in quis esse in culpa labore. Cupidatat officia ullamco esse magna reprehenderit labore sint aliqua quis irure cillum dolor. Lorem ipsum excepteur ut eiusmod aliqua do eiusmod aliqua eiusmod ut veniam cillum do dolor culpa occaecat in consequat veniam duis. Sunt fugiat consequat occaecat deserunt consectetur sed ad irure adipisicing elit quis eiusmod nisi ut excepteur qui. Ex incididunt adipisicing laboris dolor proident dolore amet magna laboris laborum. Velit do anim in dolor quis in occaecat dolore in incididunt commodo dolore voluptate culpa et anim.</p>
-				</div>
-				<div class="col-lg-12">
-					<h4>Aliqua labore culpa adipisicing voluptate velit officia fugiat mollit.</h4>
-					<p class="text-justify">Ea magna laboris ut dolor in non consectetur laborum nisi incididunt anim veniam proident ex dolor in amet mollit. Ea dolor duis deserunt eiusmod officia in culpa ea id veniam commodo nisi est anim labore laboris nostrud. Amet in adipisicing enim et tempor reprehenderit officia deserunt ut nulla nulla aliqua aute et laborum exercitation. Ad in cupidatat consequat nulla nostrud tempor ut aliqua voluptate proident ullamco. Sed non mollit esse quis duis eiusmod ex dolor. Anim do commodo eu nostrud nisi dolor consectetur aute fugiat culpa. Nulla anim dolore consectetur excepteur minim dolore pariatur ex id cupidatat. Id irure eiusmod esse enim esse pariatur amet consectetur esse officia esse labore ex proident in. Lorem ipsum excepteur quis ullamco magna aliqua nulla laboris esse do in dolor cupidatat ad nulla elit.</p>
 				</div>
 			</div>
 		</div>
@@ -171,33 +280,33 @@
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-4">
-					<a href="https://www.debian.org" target="_blank">
-						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					<a href="https://aprendiendoarduino.wordpress.com/tag/github/" target="_blank">
+						<img src="img/gitHub1.png" alt="" class="img-thumbnail">
 					</a>
 				</div>
 				<div class="col-lg-4">
-					<a href="https://www.debian.org" target="_blank">
-						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					<a href="https://www.ecodeup.com/instala-y-crea-tu-primer-repositorio-local-con-git-en-windows/" target="_blank">
+						<img src="img/Instala-y-crea-tu-primer-repositorio-local-con-Git-en-Windows-blog.jpg" alt="" class="img-thumbnail">
 					</a>
 				</div>
 				<div class="col-lg-4">
-					<a href="https://www.debian.org" target="_blank">
-						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					<a href="https://git-scm.com/" target="_blank">
+						<img src="img/branching-illustration@2x.png" alt="" class="img-thumbnail">
 					</a>
 				</div>
 				<div class="col-lg-4">
-					<a href="https://www.debian.org" target="_blank">
-						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					<a href="https://git-scm.com/book/es/v1/Empezando-Configurando-Git-por-primera-vez" target="_blank">
+						<img src="img/gwindows_logo.png" alt="" class="img-thumbnail">
 					</a>
 				</div>
 				<div class="col-lg-4">
-					<a href="https://www.debian.org" target="_blank">
-						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					<a href="https://git-scm.com/book/es/v1/Fundamentos-de-Git-Trabajando-con-repositorios-remotos" target="_blank">
+						<img src="img/github.png" alt="" class="img-thumbnail">
 					</a>
 				</div>
 				<div class="col-lg-4">
-					<a href="https://www.debian.org" target="_blank">
-						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					<a href="https://github.com/login" target="_blank">
+						<img src="img/login.JPG" alt="" class="img-thumbnail">
 					</a>
 				</div>
 			</div>
@@ -210,16 +319,20 @@
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-6">
+						<h4>VIDEO 1</h4>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/HiXLkL42tMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-lg-6">
+					<h4>VIDEO 2</h4>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/3XlZWpLwvvo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-lg-6">
+					<h4>VIDEO 3</h4>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div class="col-lg-6">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="col-lg-6">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="col-lg-6">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h4>VIDEO 4</h4>
+				 <iframe width="560" height="315" src="https://www.youtube.com/embed/RRegIKu-z3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -231,36 +344,41 @@
 			</div>
 			<div class="row margen-seccion">
 				<div class="col-lg-6">
-					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+					<h4>¿Cómo Instalar Git en Windows</h4>
+					<audio src="audios/¿Cómo Instalar Git en Windows.mp3" controls></audio>
 				</div>
 				<div class="col-lg-6">
-					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+					<h4>Como utilizar GitHub y Git para novatos Primeros pasos</h4>
+					<audio src="audios/Como utilizar GitHub y Git para novatos Primeros pasos.mp3" controls></audio>
 				</div>
 				<div class="col-lg-6">
-					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+					<h4>Cómo instalar Git en Windows Linux y macOS</h4>
+					<audio src="audios/Tutorial de Git – 2. Cómo instalar Git en Windows Linux y macOS.mp3" controls></audio>
 				</div>
 				<div class="col-lg-6">
-					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+					<h4>GitHub vs GitLab  PlatziLive</h4>
+					<audio src="audios/GitHub vs GitLab  PlatziLive.mp3" controls></audio>
 				</div>
 			</div>
 		</div>
 		<div class="seccion seccion-oculta seccion-acerca">
 			<div class="row margen-seccion">
 				<div class="col-lg-12">
-					<h3 class="text-center">Acerca de mí</h3>
+					<h3 class="text-center">Acerca del Autor</h3>
 				</div>
 				<div class="col-lg-4">
-					<img src="img/Octocat.png" class="img-thumbnail" alt="">
+					<img src="img/foto digital 1.jpg" class="img-thumbnail" alt="">
 				</div>
 				<div class="col-lg-8">
-					<p class="text-justify">Luis carlos</p>
-					<p class="text-justify">Luis carlos</p>
-					<p class="text-justify">Luis carlos</p>
-					<p class="text-justify">Luis carlos</p>
+					<p class="text-justify">Luis Carlos Paredes Figueroa</p>
+					<p class="text-justify">Código:301122_29</p>
+					<p class="text-justify">Ingeniería de Sistemas</p>
+					<p class="text-justify">Correo:lcparedesf@unadvirtual.edu.co</p>
+					<p class="text-justify">Skype:luiscarlos_1212</p>
 				</div>
 			</div>
 		</div>
-		<footer><p class="text-center">pie de pagina unad</p></footer>
+		<footer><p class="text-center">Universidad Nacional Abierta y a Distancia UNAD - CEAD - Bucaramanga - Colombia</p></footer>
 	</div>
 	<script src="plugins/jquery/jquery-3.4.1.min.js"></script>
 	<script src="plugins/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
