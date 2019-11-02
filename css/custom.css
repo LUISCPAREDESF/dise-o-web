@@ -1,0 +1,26 @@
+.img-w-150{
+	width: 150px;
+	height: auto;
+}
+
+#tituloIndex{
+	margin-top:50px;
+}
+
+.margen-seccion{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.margen-imagen{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.seccion-oculta{
+	display: none;
+}
+
+.enlace{
+	cursor: pointer;
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+	<link rel="stylesheet" href="plugins/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Github</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#"><span onclick="mostrar_vista('inicio');" class="enlace">Inicio</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><span onclick="mostrar_vista('lecturas');" class="enlace">Lecturas</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><span onclick="mostrar_vista('imagenes');" class="enlace">Imágenes</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><span onclick="mostrar_vista('videos');" class="enlace">Videos</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><span onclick="mostrar_vista('audios');" class="enlace">Audios</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><span onclick="mostrar_vista('acerca');" class="enlace">Acerca del sitio</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="seccion seccion-inicio">
+			<div class="row margen-seccion">
+				<div class="col-lg-4">
+					<img src="img/unad.png" class="img-w-150" alt="">
+				</div>
+				<div class="col-lg-8">
+					<h3 class="text-center" id="tituloIndex">Conocimiento Github</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-9">
+					<p class="text-justify">Los sistemas de control de versiones son programas que tienen como objetivo controlar los cambios del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+					<div class="row">
+						<div class="col-lg-9">
+							<h4>Tematicas a desarrollar</h4>
+							<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
+							<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+							<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
+						</div>
+						<div class="col-lg-3">
+							<img src="img/gwindows_logo.png" class="img-w-150 margen-imagen" alt="">
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-3">
+					<!-- <img src="img/gwindows_logo.png" class="img-w-150 margen-imagen" alt="">
+					<img src="img/Octocat.png" class="img-w-150 margen-imagen" alt=""> -->
+					<a class="twitter-timeline" data-width="275" data-height="420" data-dnt="true" href="https://twitter.com/UniversidadUNAD">Tweets by UniversidadUNAD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-instalacion">
+			<div class="row margen-seccion">
+				<div class="col-lg-4">
+					<img src="img/unad.png" class="img-w-150" alt="">
+				</div>
+				<div class="col-lg-8">
+					<h3 class="text-center" id="tituloIndex">Instalacion</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-9">
+					<p class="text-justify">Los sistemas de control de versiones, revisar en nuestra seccion de <span onclick="mostrar_vista('videos')" class="enlace" style="color: #0086FF">videos</span> el video 2del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+					<h4>Tematicas a desarrollar</h4>
+					<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
+					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+					<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
+				</div>
+				<div class="col-lg-3">
+					<img src="img/gwindows_logo.png" class="img-w-150 margen-imagen" alt="">
+					<img src="img/Octocat.png" class="img-w-150 margen-imagen" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-configuracion">
+			<div class="row margen-seccion">
+				<div class="col-lg-4">
+					<img src="img/unad.png" class="img-w-150" alt="">
+				</div>
+				<div class="col-lg-8">
+					<h3 class="text-center" id="tituloIndex">Configuración</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-9">
+					<p class="text-justify">Los sistemas de control de versiones son programas que tienen como objetivo controlar los cambios del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+					<h4>Tematicas a desarrollar</h4>
+					<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
+					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+					<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
+				</div>
+				<div class="col-lg-3">
+					<img src="img/gwindows_logo.png" class="img-w-150 margen-imagen" alt="">
+					<img src="img/Octocat.png" class="img-w-150 margen-imagen" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-sincronizacion">
+			<div class="row margen-seccion">
+				<div class="col-lg-4">
+					<img src="img/unad.png" class="img-w-150" alt="">
+				</div>
+				<div class="col-lg-8">
+					<h3 class="text-center" id="tituloIndex">Sincronización</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-9">
+					<p class="text-justify">Los sistemas de control de versiones son programas que tienen como objetivo controlar los cambios del desarrollo de cualquier tipo de software y así permitiendo conocer el estado actual de un proyecto, la interacción con los cambios y a su vez quienes intervienen en el mismo, son  herramientas fundamentales para cualquier desarrollador, no importa el lenguaje en el que lo haga como lo son Git y GitHub, adicionalmente este controlador de versiones ha sido de gran importancia en la industria y es fundamental para su conocimiento</p>
+					<h4>Tematicas a desarrollar</h4>
+					<span onclick="mostrar_vista('instalacion');" class="enlace">Aprender a instalar las herramientas Git en su computadora</span><br>
+					<span onclick="mostrar_vista('configuracion');" class="enlace">Configurar y crsdfgdear un repositorio local con Git</span><br>
+					<span onclick="mostrar_vista('sincronizacion');" class="enlace">Sincronizar nuestro repositorio local a GitHub</span><br>
+				</div>
+				<div class="col-lg-3">
+					<img src="img/gwindows_logo.png" class="img-w-150 margen-imagen" alt="">
+					<img src="img/Octocat.png" class="img-w-150 margen-imagen" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-lecturas">
+			<div class="row margen-seccion">
+				<div class="col-lg-12">
+					<h3 class="text-center">Lecturas</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-12">
+					<h4>Aliqua qui amet amet consectetur et laborum sed et aliquip velit deserunt deserunt aliqua magna enim ut.</h4>
+					<p class="text-justify">Elit ut aliqua velit commodo in laborum duis dolor dolor ut ad. Officia amet amet mollit eu ad occaecat aute minim minim magna. Magna dolore anim esse esse aute incididunt id in occaecat laborum voluptate dolor ut nisi consectetur. Ut est minim ut non eu aliquip quis duis. Aute sunt sint veniam qui pariatur esse laborum cupidatat dolor aliquip in consequat. Veniam dolor anim aliqua culpa ut tempor consequat culpa ea in ut commodo aliqua veniam magna do. Dolor labore sunt mollit dolor eiusmod velit dolor aute sed in cupidatat sunt sed aliqua. Esse dolore eiusmod et dolore culpa cillum ullamco non ea aute in ex amet cillum.</p>
+				</div>
+				<div class="col-lg-12">
+					<h4>Lorem ipsum veniam occaecat ea proident proident proident eiusmod esse id mollit id nisi dolor qui proident magna mollit minim ut.</h4>
+					<p class="text-justify">Dolore consectetur amet mollit irure cupidatat reprehenderit mollit occaecat magna. Irure ullamco sint consectetur id esse adipisicing ea adipisicing ut occaecat sunt esse esse reprehenderit dolore veniam voluptate. Lorem ipsum dolore culpa in culpa tempor aliqua cillum cupidatat ullamco in cillum nulla nulla irure dolore excepteur nisi. Reprehenderit nisi aute excepteur ea enim exercitation laborum pariatur aliqua nulla esse consequat. Lorem ipsum qui consectetur ut dolore non pariatur cillum aute magna non quis consequat. Aute dolore in magna minim qui irure voluptate ex aliquip. Qui anim mollit deserunt esse occaecat nisi magna sit ea tempor laborum pariatur enim. Dolore dolore tempor mollit exercitation excepteur sit enim velit pariatur enim culpa ex excepteur mollit nulla elit.</p>
+				</div>
+				<div class="col-lg-12">
+					<h4>Elit cupidatat consequat culpa culpa in ullamco aliqua enim deserunt.</h4>
+					<p class="text-justify">Lorem ipsum quis duis incididunt nulla minim ut mollit nulla exercitation non proident ut magna anim fugiat aute in fugiat sint. Exercitation voluptate ad esse incididunt in in quis esse in culpa labore. Cupidatat officia ullamco esse magna reprehenderit labore sint aliqua quis irure cillum dolor. Lorem ipsum excepteur ut eiusmod aliqua do eiusmod aliqua eiusmod ut veniam cillum do dolor culpa occaecat in consequat veniam duis. Sunt fugiat consequat occaecat deserunt consectetur sed ad irure adipisicing elit quis eiusmod nisi ut excepteur qui. Ex incididunt adipisicing laboris dolor proident dolore amet magna laboris laborum. Velit do anim in dolor quis in occaecat dolore in incididunt commodo dolore voluptate culpa et anim.</p>
+				</div>
+				<div class="col-lg-12">
+					<h4>Aliqua labore culpa adipisicing voluptate velit officia fugiat mollit.</h4>
+					<p class="text-justify">Ea magna laboris ut dolor in non consectetur laborum nisi incididunt anim veniam proident ex dolor in amet mollit. Ea dolor duis deserunt eiusmod officia in culpa ea id veniam commodo nisi est anim labore laboris nostrud. Amet in adipisicing enim et tempor reprehenderit officia deserunt ut nulla nulla aliqua aute et laborum exercitation. Ad in cupidatat consequat nulla nostrud tempor ut aliqua voluptate proident ullamco. Sed non mollit esse quis duis eiusmod ex dolor. Anim do commodo eu nostrud nisi dolor consectetur aute fugiat culpa. Nulla anim dolore consectetur excepteur minim dolore pariatur ex id cupidatat. Id irure eiusmod esse enim esse pariatur amet consectetur esse officia esse labore ex proident in. Lorem ipsum excepteur quis ullamco magna aliqua nulla laboris esse do in dolor cupidatat ad nulla elit.</p>
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-imagenes">
+			<div class="row margen-seccion">
+				<div class="col-lg-12">
+					<h3 class="text-center">Imágenes</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-4">
+					<a href="https://www.debian.org" target="_blank">
+						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<a href="https://www.debian.org" target="_blank">
+						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<a href="https://www.debian.org" target="_blank">
+						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<a href="https://www.debian.org" target="_blank">
+						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<a href="https://www.debian.org" target="_blank">
+						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<a href="https://www.debian.org" target="_blank">
+						<img src="img/header.jpg" alt="" class="img-thumbnail">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-videos">
+			<div class="row margen-seccion">
+				<div class="col-lg-12">
+					<h3 class="text-center">Vídeos</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-6">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-lg-6">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-lg-6">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-lg-6">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/hWglK8nWh60" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-audios">
+			<div class="row margen-seccion">
+				<div class="col-lg-12">
+					<h3 class="text-center">Audios</h3>
+				</div>
+			</div>
+			<div class="row margen-seccion">
+				<div class="col-lg-6">
+					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+				</div>
+				<div class="col-lg-6">
+					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+				</div>
+				<div class="col-lg-6">
+					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+				</div>
+				<div class="col-lg-6">
+					<audio src="audios/Residente - Pecador (Official Video).mp3" controls></audio>
+				</div>
+			</div>
+		</div>
+		<div class="seccion seccion-oculta seccion-acerca">
+			<div class="row margen-seccion">
+				<div class="col-lg-12">
+					<h3 class="text-center">Acerca de mí</h3>
+				</div>
+				<div class="col-lg-4">
+					<img src="img/Octocat.png" class="img-thumbnail" alt="">
+				</div>
+				<div class="col-lg-8">
+					<p class="text-justify">Luis carlos</p>
+					<p class="text-justify">Luis carlos</p>
+					<p class="text-justify">Luis carlos</p>
+					<p class="text-justify">Luis carlos</p>
+				</div>
+			</div>
+		</div>
+		<footer><p class="text-center">Duis non labore qui amet qui aliquip ad eu consequat mollit sit.</p></footer>
+	</div>
+	<script src="plugins/jquery/jquery-3.4.1.min.js"></script>
+	<script src="plugins/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="scripts/mostrar_menu.js"></script>
+</body>
+</html>
